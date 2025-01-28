@@ -36,83 +36,150 @@
             <a href="index.html" class="btn btn-primary">Explore Features</a>
         </div>
     </header>
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <!-- Cow Records Section -->
+        <h2 class="text-center mb-4">Cow Records</h2>
+        <div class="mb-3 text-end">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCowModal">Add Cow</button>
+        </div>
 
-    <!-- Main Content -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Cow Records</h2>
-            <div class="mb-3 text-end">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCowModal">Add Cow</button>
-            </div>
+        <!-- Cow Table -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Breed</th>
+                        <th>Age</th>
+                        <th>Health Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Placeholder Rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>Holstein Friesian</td>
+                        <td>3</td>
+                        <td>Healthy</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jersey</td>
+                        <td>5</td>
+                        <td>Under Observation</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <!-- Cow Table -->
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Breed</th>
-                            <th>Age</th>
-                            <th>Health Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Placeholder Rows -->
-                        <tr>
-                            <td>1</td>
-                            <td>Holstein Friesian</td>
-                            <td>3</td>
-                            <td>Healthy</td>
-                            <td>
-                                <button class="btn btn-sm btn-warning">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jersey</td>
-                            <td>5</td>
-                            <td>Under Observation</td>
-                            <td>
-                                <button class="btn btn-sm btn-warning">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Add Cow Modal -->
+        <div class="modal fade" id="addCowModal" tabindex="-1" aria-labelledby="addCowModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addCowModalLabel">Add New Cow</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="breed" class="form-label">Breed</label>
+                                <input type="text" class="form-control" id="breed" placeholder="Enter breed">
+                            </div>
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Age</label>
+                                <input type="number" class="form-control" id="age" placeholder="Enter age">
+                            </div>
+                            <div class="mb-3">
+                                <label for="health" class="form-label">Health Status</label>
+                                <textarea class="form-control" id="health" rows="3" placeholder="Enter health status"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Add Cow Modal -->
-    <div class="modal fade" id="addCowModal" tabindex="-1" aria-labelledby="addCowModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addCowModalLabel">Add New Cow</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="breed" class="form-label">Breed</label>
-                            <input type="text" class="form-control" id="breed" placeholder="Enter breed">
-                        </div>
-                        <div class="mb-3">
-                            <label for="age" class="form-label">Age</label>
-                            <input type="number" class="form-control" id="age" placeholder="Enter age">
-                        </div>
-                        <div class="mb-3">
-                            <label for="health" class="form-label">Health Status</label>
-                            <textarea class="form-control" id="health" rows="3" placeholder="Enter health status"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </form>
+        <!-- Sheds Section -->
+        <h2 class="text-center my-5">Shed Records</h2>
+        <div class="mb-3 text-end">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addShedModal">Add Shed</button>
+        </div>
+
+        <!-- Shed Table -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Location</th>
+                        <th>Capacity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Placeholder Rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>North Wing</td>
+                        <td>50 Cows</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>South Wing</td>
+                        <td>40 Cows</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Add Shed Modal -->
+        <div class="modal fade" id="addShedModal" tabindex="-1" aria-labelledby="addShedModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addShedModalLabel">Add New Shed</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Enter location">
+                            </div>
+                            <div class="mb-3">
+                                <label for="capacity" class="form-label">Capacity</label>
+                                <input type="number" class="form-control" id="capacity" placeholder="Enter capacity">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
